@@ -1,25 +1,25 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import styled from 'styled-components';
+import Header from './Header';
+import Landing from './Landing';
+import Footer from './Footer';
+import { Switch, Route } from 'react-router-dom';
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+    <Div>
+      <Header />
+      <Switch>
+        <Route exact path='/' component={Landing} />
+      </Switch>
+      <Footer />
+    </Div>
+  )
+};
+
+const Div = styled.div`
+  width:100vw;
+  height:auto;
+`;
 
 export default App;
