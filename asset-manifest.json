@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/densan/static/css/main.7a47c112.chunk.css",
+    "main.js": "/densan/static/js/main.c1db9c7f.chunk.js",
+    "main.js.map": "/densan/static/js/main.c1db9c7f.chunk.js.map",
+    "runtime-main.js": "/densan/static/js/runtime-main.899e5f87.js",
+    "runtime-main.js.map": "/densan/static/js/runtime-main.899e5f87.js.map",
+    "static/js/2.1f05f7ea.chunk.js": "/densan/static/js/2.1f05f7ea.chunk.js",
+    "static/js/2.1f05f7ea.chunk.js.map": "/densan/static/js/2.1f05f7ea.chunk.js.map",
+    "static/js/3.5d1c523d.chunk.js": "/densan/static/js/3.5d1c523d.chunk.js",
+    "static/js/3.5d1c523d.chunk.js.map": "/densan/static/js/3.5d1c523d.chunk.js.map",
+    "index.html": "/densan/index.html",
+    "static/css/main.7a47c112.chunk.css.map": "/densan/static/css/main.7a47c112.chunk.css.map",
+    "static/js/2.1f05f7ea.chunk.js.LICENSE.txt": "/densan/static/js/2.1f05f7ea.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.899e5f87.js",
+    "static/js/2.1f05f7ea.chunk.js",
+    "static/css/main.7a47c112.chunk.css",
+    "static/js/main.c1db9c7f.chunk.js"
+  ]
+}
