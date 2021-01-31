@@ -5,6 +5,8 @@ export const Title = styled.div`
   font-weight:${({ theme: { fontWeight } }) => fontWeight.title};
   font-size:${({ theme: { fontSize } }) => fontSize.lg};
   color:${({ theme: { color } }) => color.text.title};
+  margin:${({ margin }) => margin ? margin : 0};
+  padding:${({ padding }) => padding ? padding : 0};
 `;
 
 export const SubTitle = styled.div`
@@ -12,13 +14,17 @@ export const SubTitle = styled.div`
   font-weight:${({ theme: { fontWeight } }) => fontWeight.subTitle};
   font-size:${({ theme: { fontSize } }) => fontSize.md};
   color:${({ theme: { color } }) => color.text.subTitle};
+  margin:${({ margin }) => margin ? margin : 0};
+  padding:${({ padding }) => padding ? padding : 0};
 `;
 
 export const Description = styled.div`
   font-family:${({ theme: { fontFamily } }) => fontFamily};
   font-weight:${({ theme: { fontWeight } }) => fontWeight.description};
-  font-size:${({ theme: { fontSize } }) => fontSize.xs};
+  font-size:${({ theme: { fontSize } }) => fontSize.sm};
   color:${({ theme: { color } }) => color.text.description};
+  margin:${({ margin }) => margin ? margin : 0};
+  padding:${({ padding }) => padding ? padding : 0};
 `;
 
 export const Button = styled.button`
@@ -42,6 +48,9 @@ export const Container = styled.div`
   display:flex;
   justify-content:center;
   width:100%;
+  @media(max-width:700px){
+    margin-top:55px;
+  }
 `;
 
 export const CustomLinks = styled.a`

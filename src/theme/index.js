@@ -15,14 +15,14 @@ const theme = {
   fontWeight: {
     title: 700,
     subTitle: 500,
-    description: 300
+    description: 400
   },
   fontSize: {
-    xl: '32px',
-    lg: '28px',
-    md: '24px',
-    small: '22px',
-    xs: '18px'
+    xl: '28px',
+    lg: '24px',
+    md: '22px',
+    small: '18px',
+    xs: '14px'
   }
 };
 
