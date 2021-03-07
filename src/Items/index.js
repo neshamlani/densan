@@ -16,13 +16,11 @@ const ItemWrapper = styled.div`
   width: 240px;
   height: 240px;
   flex-direction: column;
-  padding: 20px;
+  padding: 10px;
   align-items: center;
-  border: 2px solid transparent;
 
   &:hover {
-    border: 2px solid ${({ theme }) => theme.color.background.secondary};
-    border-radius: 10px;
+    box-shadow: 5px 10px 10px grey;
   }
 `;
 

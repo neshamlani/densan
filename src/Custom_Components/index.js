@@ -7,6 +7,10 @@ export const Title = styled.div`
   color: ${({ theme: { color } }) => color.text.title};
   margin: ${({ margin }) => (margin ? margin : 0)};
   padding: ${({ padding }) => (padding ? padding : 0)};
+
+  @media (max-width: 700px) {
+    font-size: ${({ theme: { fontSize } }) => fontSize.md};
+  }
 `;
 
 export const SubTitle = styled.div`
@@ -16,6 +20,10 @@ export const SubTitle = styled.div`
   color: ${({ theme: { color } }) => color.text.subTitle};
   margin: ${({ margin }) => (margin ? margin : 0)};
   padding: ${({ padding }) => (padding ? padding : 0)};
+
+  @media (max-width: 700px) {
+    font-size: ${({ theme: { fontSize } }) => fontSize.sm};
+  }
 `;
 
 export const Description = styled.div`
@@ -25,6 +33,10 @@ export const Description = styled.div`
   color: ${({ theme: { color } }) => color.text.description};
   margin: ${({ margin }) => (margin ? margin : 0)};
   padding: ${({ padding }) => (padding ? padding : 0)};
+
+  @media (max-width: 700px) {
+    font-size: ${({ theme: { fontSize } }) => fontSize.xs};
+  }
 `;
 
 export const Button = styled.button`
@@ -44,6 +56,10 @@ export const Button = styled.button`
   margin: ${({ margin }) => (margin ? margin : 0)};
   &:hover {
     opacity: 0.7;
+  }
+
+  @media (max-width: 700px) {
+    font-size: ${({ theme: { fontSize } }) => fontSize.sm};
   }
 `;
 
@@ -66,4 +82,8 @@ export const CustomLinks = styled.a`
   color: ${({ theme: { color } }) => color.text.subTitle};
   margin-top: ${({ margin }) => margin && "10px"};
   width: fit-content;
+
+  @media (max-width: 700px) {
+    font-size: ${({ theme: { fontSize } }) => fontSize.xs};
+  }
 `;

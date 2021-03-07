@@ -1,9 +1,18 @@
-import React from "react";
+import React, { useState } from "react";
 import styled from "styled-components";
+import { useParams } from "react-router-dom";
+import { Container, Title, Description } from "../Custom_Components";
 
-const ProductDetails = (props) => {
-  console.log("props", props);
-  return <div>Product</div>;
+const ProductDetails = ({ data }) => {
+  const { id } = useParams();
+  const details = data[id];
+  console.log("details", details);
+  return (
+    <Container>
+      <Title>{details.name}</Title>
+      <Description>{details.description}</Description>
+    </Container>
+  );
 };
 
 export default ProductDetails;

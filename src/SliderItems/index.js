@@ -3,13 +3,7 @@ import styled from "styled-components";
 import { Title, Description, Button } from "../Custom_Components";
 import { Link } from "react-router-dom";
 
-const SliderItems = ({
-  imageUrl,
-  name,
-  description,
-  price,
-  productDetails,
-}) => {
+const SliderItems = ({ imageUrl, name, description, price, id }) => {
   return (
     <Wrapper>
       <LeftWrapper>
@@ -24,8 +18,7 @@ const SliderItems = ({
         <RightBottomWrapper>
           <Link
             to={{
-              pathname: "/details",
-              productProps: { ...productDetails },
+              pathname: `/details/${id}`,
             }}
           >
             <Button primary={1} width="100px">
@@ -44,6 +37,8 @@ const Wrapper = styled.div`
   display: flex;
 
   @media (max-width: 700px) {
+    justify-content: center;
+    align-items: center;
     flex-direction: column;
     height: 100%;
   }

@@ -9,15 +9,25 @@ const Header = () => {
   return (
     <Wrapper>
       <MediaQuery maxWidth={700}>
-        <img
-          src={Hamburger}
-          width="40px"
-          height="30px"
-          onClick={() => setIsOpen(true)}
-          alt="hamburger icon"
-        />
+        <RightWrapper>
+          <img
+            src={Hamburger}
+            width="40px"
+            height="30px"
+            onClick={() => setIsOpen(true)}
+            alt="hamburger icon"
+          />
+          <Title>Saakar Sales & Services</Title>
+        </RightWrapper>
+        <Drawer open={isOpen}>
+          <a href="tel:08048720017">
+            <Button primary={1} margin="0 5px">
+              Call Now
+            </Button>
+          </a>
+          <Button margin="0 5px">Send Mail</Button>
+        </Drawer>
         <Backdrop onClick={() => setIsOpen(false)} open={isOpen} />
-        <Drawer open={isOpen}>Drawer</Drawer>
       </MediaQuery>
       <MediaQuery minWidth={700}>
         <LeftWrapper>
@@ -64,6 +74,10 @@ const LeftWrapper = styled.div`
 
 const RightWrapper = styled.div`
   display: flex;
+
+  @media (max-width: 700px) {
+    gap: 20px;
+  }
 `;
 
 const Backdrop = styled.div`
@@ -88,7 +102,8 @@ const Drawer = styled.div`
   z-index: 1001;
   top: 0;
   width: 0%;
-  height: 100vh;
+  min-height: 100vh;
+  height: auto;
   background: white;
   margin-left: -20px;
   animation-name: slide;

@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import styled from "styled-components";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -8,30 +8,10 @@ import {
   Title,
   Description,
 } from "../Custom_Components";
-import axios from "axios";
 import SliderItems from "../SliderItems";
-import map from "lodash/map";
-import Loading from "../Loading";
 import Items from "../Items";
 
-const Landing = () => {
-  const [data, setData] = useState([]);
-  const [isLoading, setIsLoading] = useState(false);
-  useEffect(() => {
-    setIsLoading(true);
-    axios
-      .get("https://densan-saakar-sales-default-rtdb.firebaseio.com/.json")
-      .then((response) => {
-        const resp = map(response.data);
-        setData(resp);
-        setIsLoading(false);
-      })
-      .catch((e) => {
-        console.log(e);
-        setIsLoading(false);
-      });
-  }, []);
-
+const Landing = ({ data }) => {
   let settings = {
     dots: true,
     infinite: true,
@@ -41,8 +21,6 @@ const Landing = () => {
     autoplaySpeed: 3000,
     autoplay: true,
   };
-
-  //if (isLoading) return <Loading />;
 
   return (
     <Container>
@@ -55,7 +33,6 @@ const Landing = () => {
             price={val.price}
             key={index}
             id={index}
-            productDetails={data[index]}
           />
         ))}
       </SliderWrapper>
@@ -79,8 +56,8 @@ const Container = styled(ContainerAtom)`
 `;
 
 const SliderWrapper = styled(Slider)`
-  width: 80%;
-  height: 350px;
+  width: 90%;
+  height: 400px;
   margin: 10px auto 10px;
 
   .slick-prev:before,
@@ -91,6 +68,7 @@ const SliderWrapper = styled(Slider)`
 
   @media (max-width: 700px) {
     height: 100%;
+    width: 80%;
   }
 `;
 
@@ -98,6 +76,11 @@ const ProductWrapper = styled.div`
   display: flex;
   flex-wrap: wrap;
   padding: 20px;
+
+  @media (max-width: 449px) {
+    flex-direction: column;
+    align-items: center;
+  }
 `;
 
 export default Landing;
